@@ -1,0 +1,10 @@
+node_modules
+dist
+.git
+.github
+.vscode
+tests/e2e_tests/videos
+tests/e2e_tests/screenshots
+tests/e2e_tests/downloads
+npm-debug.log*
+README.md

@@ -1,0 +1,20 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: dockerfile
+      args:
+        VITE_SUPABASE_URL: ${VITE_SUPABASE_URL}
+        VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY}
+        VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY: ${VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY}
+        VITE_BASE_PATH: ${VITE_BASE_PATH:-/}
+    ports:
+      - "5173:8080"
+    env_file:
+      - .env
+    environment:
+      # Для статического фронтенда переменные важны на этапе build (args выше),
+      # но оставлены и в runtime для прозрачности конфигурации.
+      - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+      - VITE_SUPABASE_ANON_KEY=${VITE_SUPABASE_ANON_KEY}
+      - VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY=${VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY}

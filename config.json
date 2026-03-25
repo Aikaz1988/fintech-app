@@ -1,0 +1,27 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "src": "src/pages/Dashboard.tsx"
+    },
+    {
+      "path": "/transactions",
+      "src": "src/pages/Transactions.tsx"
+    },
+    {
+      "path": "/subscriptions",
+      "src": "src/pages/Subscriptions.tsx"
+    },
+    {
+      "path": "/budgets",
+      "src": "src/pages/Budgets.tsx"
+    },
+    {
+      "path": "/settings",
+      "src": "src/pages/Settings.tsx"
+    }
+  ],
+  "components": [
+    { "name": "Sidebar", "src": "src/components/Sidebar.tsx" }
+  ]
+}
